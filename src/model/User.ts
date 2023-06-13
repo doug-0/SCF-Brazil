@@ -52,13 +52,10 @@ export default class UserModel {
   }
 
   public alreadyExist(object: UserInterface) {
-    console.log('verificando se já existe', object)
-    console.log('users', this.users)
-    const alreayExist = this.users.find((user) => {
+    const alreadyExist = this.users.find((user) => {
       return user.name === object.name
     })
-    console.log('alreayExist', alreayExist)
 
-    return alreayExist ? 401 : 100
+    return alreadyExist ? 401 : 100
   }
 }
